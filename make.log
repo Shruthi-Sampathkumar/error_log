@@ -1,0 +1,199 @@
+[2020-02-16 00:44:01] __rvm_make
+__rvm_make () 
+{ 
+    \make "$@" || return $?
+}
+current path: /Users/shruthi/.rvm/src/ruby-2.6.0
+PATH=/usr/local/opt/coreutils/bin:/usr/local/opt/pkg-config/bin:/usr/local/opt/libtool/bin:/usr/local/opt/automake/bin:/usr/local/opt/autoconf/bin:/usr/local/opt/ruby/bin:/anaconda3/bin:/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/shruthi/.rvm/bin
+command(2): __rvm_make -j8
+++ make -j8
+	BASERUBY = /usr/bin/ruby --disable=gems
+	CC = gcc
+	LD = //anaconda3/bin/x86_64-apple-darwin13.4.0-ld
+	LDSHARED = gcc -dynamiclib
+	CFLAGS = -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fPIE -fstack-protector-strong -O2 -pipe -fno-common 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector-strong -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT -DCANONICALIZATION_FOR_MATHN
+	CPPFLAGS = -D_FORTIFY_SOURCE=2 -mmacosx-version-min=10.9 -I/usr/local/opt/libyaml/include -I/usr/local/opt/libksba/include -I/usr/local/opt/readline/include -I/usr/local/opt/zlib/include -I/usr/local/opt/openssl@1.1/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -I. -I.ext/include/x86_64-darwin18 -I./include -I. -I./enc/unicode/11.0.0 
+	DLDFLAGS = -Wl,-pie -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress -L/usr/local/opt/libyaml/lib -L/usr/local/opt/libksba/lib -L/usr/local/opt/readline/lib -L/usr/local/opt/zlib/lib -L/usr/local/opt/openssl@1.1/lib -install_name /Users/shruthi/.rvm/rubies/ruby-2.6.0/lib/libruby.2.6.dylib -compatibility_version 2.6 -current_version 2.6.0  -fstack-protector-strong -framework Security -framework Foundation  -fstack-protector-strong -framework Security -framework Foundation  
+	SOLIBS = -lpthread -lgmp -ldl -lobjc
+	LANG = en_US.UTF-8
+	LC_ALL = 
+	LC_CTYPE = 
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/4.2.1
+Apple clang version 11.0.0 (clang-1100.0.33.17)
+Target: x86_64-apple-darwin18.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+compiling ./main.c
+compiling dmydln.c
+compiling miniinit.c
+compiling dmyext.c
+compiling miniprelude.c
+translating probes probes.d
+compiling ast.c
+compiling bignum.c
+compiling class.c
+compiling compar.c
+. ./vm_opts.h
+compiling compile.c
+compiling complex.c
+compiling cont.c
+compiling debug.c
+compiling debug_counter.c
+compiling dir.c
+compiling dln_find.c
+compiling encoding.c
+compiling enum.c
+compiling enumerator.c
+compiling error.c
+compiling eval.c
+compiling file.c
+compiling gc.c
+file.c:2679:6: warning: 'utimensat' is only available on macOS 10.13 or newer [-Wunguarded-availability-new]
+        if (utimensat(AT_FDCWD, path, tsp, flags) < 0) {
+            ^~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stat.h:374:9: note: 'utimensat' has been marked as being introduced in macOS 10.13 here, but the deployment target is macOS 10.9.0
+int     utimensat(int __fd, const char *__path, const struct timespec __times[2],
+        ^
+file.c:2679:6: note: enclose 'utimensat' in a __builtin_available check to silence this warning
+        if (utimensat(AT_FDCWD, path, tsp, flags) < 0) {
+            ^~~~~~~~~
+compiling hash.c
+compiling inits.c
+compiling io.c
+compiling iseq.c
+compiling load.c
+compiling marshal.c
+1 warning generated.
+compiling math.c
+making mjit_config.h
+compiling mjit_compile.c
+compiling node.c
+compiling numeric.c
+compiling object.c
+compiling pack.c
+compiling parse.c
+compiling proc.c
+compiling process.c
+compiling random.c
+compiling range.c
+compiling rational.c
+compiling re.c
+compiling regcomp.c
+compiling regenc.c
+compiling regerror.c
+compiling regexec.c
+compiling regparse.c
+compiling regsyntax.c
+compiling ruby.c
+compiling safe.c
+compiling signal.c
+compiling sprintf.c
+compiling st.c
+compiling strftime.c
+compiling string.c
+compiling struct.c
+compiling symbol.c
+compiling thread.c
+compiling time.c
+compiling transcode.c
+compiling transient_heap.c
+compiling util.c
+compiling variable.c
+./revision.h unchanged
+compiling vm.c
+compiling vm_backtrace.c
+compiling vm_dump.c
+compiling vm_trace.c
+compiling ./missing/explicit_bzero.c
+compiling ./missing/setproctitle.c
+compiling addr2line.c
+compiling dmyenc.c
+compiling dln.c
+compiling localeinit.c
+compiling prelude.c
+config.status: creating ruby-runner.h
+compiling array.c
+compiling mjit.c
+assembling coroutine/amd64/Context.S
+compiling enc/ascii.c
+compiling enc/us_ascii.c
+compiling enc/unicode.c
+compiling enc/utf_8.c
+compiling enc/trans/newline.c
+compiling version.c
+building rb_mjit_header.h
+linking miniruby
+rb_mjit_header.h updated
+warning: no debug symbols in executable (-arch x86_64)
+warning: no debug symbols in executable (-arch x86_64)
+generating encdb.h
+building .ext/include/x86_64-darwin18/rb_mjit_min_header-2.6.0.h
+./miniruby -I./lib -I. -I.ext/common  ./tool/transform_mjit_header.rb "gcc " rb_mjit_header.h .ext/include/x86_64-darwin18/rb_mjit_min_header-2.6.0.h
+encdb.h updated
+./tool/ifchange "--timestamp=.rbconfig.time" rbconfig.rb rbconfig.tmp
+rbconfig.rb updated
+generating enc.mk
+creating verconf.h
+verconf.h updated
+compiling loadpath.c
+making srcs under enc
+make[1]: Nothing to be done for `srcs'.
+generating transdb.h
+linking static-library libruby.2.6-static.a
+//anaconda3/bin/x86_64-apple-darwin13.4.0-ar: illegal option -- n
+usage:  ar -d [-TLsv] archive file ...
+	ar -m [-TLsv] archive file ...
+	ar -m [-abiTLsv] position archive file ...
+	ar -p [-TLsv] archive [file ...]
+	ar -q [-cTLsv] archive file ...
+	ar -r [-cuTLsv] archive file ...
+	ar -r [-abciuTLsv] position archive file ...
+	ar -t [-TLsv] archive [file ...]
+	ar -x [-ouTLsv] archive [file ...]
+make: *** [libruby.2.6-static.a] Error 1
+make: *** Waiting for unfinished jobs....
+transdb.h updated
+
+Transforming external functions to static:
+transform_mjit_header: making external definition of 'Init_vm_stack_canary' static inline
+transform_mjit_header: making external definition of 'rb_vm_opt_struct_aset' static inline
+transform_mjit_header: making external definition of 'rb_vm_opt_struct_aref' static inline
+transform_mjit_header: making external definition of 'rb_eql_opt' static inline
+transform_mjit_header: changing definition of 'rb_equal_opt' to declaration
+transform_mjit_header: changing definition of 'rb_vm_search_method_slowpath' to declaration
+transform_mjit_header: making external definition of 'rb_vm_rewrite_cref' static inline
+transform_mjit_header: making external definition of 'rb_vm_push_frame' static inline
+transform_mjit_header: making external definition of 'rb_vm_block_ep_update' static inline
+transform_mjit_header: making external definition of 'rb_vm_cref_new_toplevel' static inline
+transform_mjit_header: making external definition of 'rb_vm_frame_block_handler' static inline
+transform_mjit_header: making external definition of 'rb_vm_ep_local_ep' static inline
+transform_mjit_header: making declaration of 'rb_vm_rewrite_cref' static inline
+transform_mjit_header: making declaration of 'rb_vm_frame_block_handler' static inline
+transform_mjit_header: making declaration of 'rb_vm_block_ep_update' static inline
+transform_mjit_header: making declaration of 'rb_vm_ep_local_ep' static inline
+transform_mjit_header: SKIPPED to transform __sigbits
+transform_mjit_header: making declaration of 'Init_vm_stack_canary' static inline
+transform_mjit_header: making declaration of 'rb_eql_opt' static inline
+transform_mjit_header: SKIPPED to transform __sincospi
+transform_mjit_header: SKIPPED to transform __sincospif
+transform_mjit_header: SKIPPED to transform __sincos
+transform_mjit_header: SKIPPED to transform __sincosf
+transform_mjit_header: SKIPPED to transform __inline_isnormall
+transform_mjit_header: SKIPPED to transform __inline_isnormald
+transform_mjit_header: SKIPPED to transform __inline_isnormalf
+transform_mjit_header: SKIPPED to transform __inline_signbitl
+transform_mjit_header: SKIPPED to transform __inline_signbitd
+transform_mjit_header: SKIPPED to transform __inline_signbitf
+transform_mjit_header: SKIPPED to transform __inline_isnanl
+transform_mjit_header: SKIPPED to transform __inline_isnand
+transform_mjit_header: SKIPPED to transform __inline_isnanf
+transform_mjit_header: SKIPPED to transform __inline_isinfl
+transform_mjit_header: SKIPPED to transform __inline_isinfd
+transform_mjit_header: SKIPPED to transform __inline_isinff
+transform_mjit_header: SKIPPED to transform __inline_isfinitel
+transform_mjit_header: SKIPPED to transform __inline_isfinited
+transform_mjit_header: SKIPPED to transform __inline_isfinitef
+transform_mjit_header: SKIPPED to transform __sputc
+ln -sf ../../../.ext/include/x86_64-darwin18/rb_mjit_min_header-2.6.0.h include/ruby-2.6.0/x86_64-darwin18/rb_mjit_min_header-2.6.0.h
+++ return 2
